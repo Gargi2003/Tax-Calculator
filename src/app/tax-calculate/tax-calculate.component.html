@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center vh-100" >
+      <div class="col-lg-8">
+        <div class="card  shadow  card-fixed-height">
+          <div class="card-body">
+            <h3 class="text-center mt-4 mb-4">Income Tax Calculator - FY 2023-2024</h3>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab === 'basic'" (click)="changeTab('basic')">1. Basic Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab === 'income'" (click)="changeTab('income')">2. Income Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab === 'deduction'" (click)="changeTab('deduction')">3. Deductions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [class.active]="activeTab === 'summary'" (click)="changeTab('summary')">4. Summary</a>
+              </li>
+            </ul>
+            <div class="row">
+              <div [ngSwitch]="activeTab">
+                <ng-container *ngSwitchCase="'basic'">
+                  <app-basic-details (goToIncomeTab)="changeTab('income')"></app-basic-details>
+                </ng-container>
+                <ng-container *ngSwitchCase="'income'">
+                  <app-income-details (goToDeductionTab)="changeTab('deduction')"></app-income-details>
+                </ng-container>
+                <ng-container *ngSwitchCase="'deduction'">
+                  <app-deductions (goToSummaryTab)="changeTab('summary')"></app-deductions>
+                </ng-container>
+                <ng-container *ngSwitchCase="'summary'">
+                  <app-summary></app-summary>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

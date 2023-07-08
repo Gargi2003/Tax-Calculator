@@ -1,0 +1,48 @@
+<div class="container  custom-container">
+    <div class="row">
+        <div class="col">
+            <p><strong>Income from salary</strong></p>
+            <input type="number" name="salary" id="" class="form-control">
+        </div>
+        <div class="col">
+            <p><strong>Exempt Allowance</strong></p>
+            <input type="number" name="exempt-allowance" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p><strong>Income from interest</strong></p>
+            <input type="number" name="interest" id="" class="form-control">
+        </div>
+        <div class="col">
+            <p><strong>Income from home-loan self-occupied</strong></p>
+            <input type="number" name="home-loan" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p><strong>Rental Income received</strong></p>
+            <input type="number" name="rent" id="" class="form-control">
+        </div>
+        <div class="col">
+            <p><strong>Interest on home loan - let out</strong></p>
+            <input type="number" name="interest-home-loan" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p><strong>Income from digital assets</strong></p>
+            <input type="number" name="digital-assets" id="" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p><strong>Other income</strong></p>
+            <input type="number" name="other-income" id="" class="form-control">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary btn-sm" (click)="goToDeductionTab.emit()">
+        Go to next step
+    </button>
+</div>
